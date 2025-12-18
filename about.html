@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pragny - Crafting Generative AI & Responsible AI Tools for a Better Tomorrow</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="AI governance, responsible AI, AI compliance, AI security, generative AI, AI risk management, AI bias detection, ethical AI, AI transparency, AI regulatory compliance, AI fairness, AI lifecycle management, AI governance tools, Pragny AI, AI accountability, AI sustainability" name="keywords">
+    <meta content="Pragny is the leading AI governance platform providing secure, ethical, and compliant Generative AI solutions. With tools like Compliance Checker, Bias Checker, and Security Checker, we help businesses build responsible AI systems that meet global regulatory and ethical standards" name="description">
+    <meta name="google-site-verification" content="IQoWQau4f7nZHS4p2EiOz0yDr0FdIK2FuIzqhfBxj5s" />
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Pragny - Secure & Responsible AI Governance Platform">
+    <meta property="og:description" content="Detect shadow AI, enforce policies, and ensure regulatory compliance with Pragny. Trusted tools for LLM governance, risk management, and bias detection.">
+    <meta property="og:image" content="https://Pragny.io/img/og-preview.png">
+    <meta property="og:url" content="https://Pragny.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pragny - Secure & Responsible AI Governance Platform">
+    <meta name="twitter:description" content="Pragny helps enterprises manage AI risks, detect shadow AI, and comply with global AI regulations like the EU AI Act.">
+    <meta name="twitter:image" content="https://Pragny.io/img/og-preview.png">    
+    <meta name="twitter:site" content="@PragnyAI">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- sweetalert js library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .hero-section {
+            background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            border-bottom: 4px solid #fff;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        .feature-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-card {
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-card img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-top: -75px;
+            border: 5px solid white;
+        }
+
+        
+
+        .feature-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .team-role {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .container {
+            max-width: 1140px;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #888;
+        }
+
+        .call-to-action-btn {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .call-to-action-btn:hover {
+            background-color: #6a11cb;
+        }
+        .btn i {
+                
+            transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for arrow movement and color */
+    }
+
+    .btn:hover i {
+            transform: translateX(5px); /* Moves the arrow */
+            color: #f8f9fa; /* Change the color of the arrow on hover */
+    }
+
+    .btn:hover {
+            background-color: #343a40; /* Darken background on hover */
+            transform: scale(1.05); /* Scale the button */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Apply shadow */
+            color: #f8f9fa; /* Change text color to light on hover */
+    }
+
+    .btn:focus {
+            outline: none;
+    }
+    .btn-link {
+            color: black !important;
+            text-decoration: none;
+    }
+
+    .btn-link:hover {
+            color: #144E73 !important; /* Keeps a slight brand touch on hover */
+            text-decoration: underline;
+            background-color:  #f4f7fe; 
+    }
+    </style>
+
+     <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pragny",
+    "url": "https://Pragny.io",
+    "logo": "https://Pragny.io/img/Pragny.png",
+    "contactPoint": [
+        {
+        "@type": "ContactPoint",
+        "telephone": "+971561507757",
+        "contactType": "Customer Service",
+        "areaServed": ["IN", "AE"],
+        "availableLanguage": ["English", "Hindi"]
+        }
+    ],
+    "address": [
+        {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "IN"
+        },
+        {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+        }
+    ],
+    "email": "hello@Pragny.io",
+    "sameAs": [
+        "https://www.facebook.com/share/14TjdpYqkM/",
+        "https://www.youtube.com/@Pragny",
+        "https://www.instagram.com/gen.crafter",
+        "https://www.linkedin.com/company/Pragny"
+    ],
+    "description": "Pragny is a secure and responsible AI governance platform helping enterprises manage LLM risks, detect shadow AI, ensure compliance, and promote ethical AI deployment."
+    }
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPW8ZD122E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-SPW8ZD122E');
+</script>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+  <div id="spinner"
+  class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+  <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Navbar Start -->
+<div class="container-fluid  fixed-top" style="background-color: #f4f7fe;">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a href="index.html" class="navbar-brand">
+              <h1 class="logo-color">Pragny</h1>
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" style="background-color: #f4f7fe;"  id="navbarCollapse">
+              <div class="navbar-nav ms-auto" style="background-color: #f4f7fe;">
+                  
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Products</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="ai_tracker.html" class="dropdown-item">AI Tracker</a>
+                          <a href="ai_lifecycle_governance.html" class="dropdown-item">AI Lifecycle Governance </a>
+                          <a href="bias_fareness_analysis.html" class="dropdown-item">Bias and Fareness Analysis</a>
+                          <a href="genai_stress_test.html" class="dropdown-item">GenAI Stress Testing </a>
+                          <a href="aI_safeguarder_for_risk_mitigation.html" class="dropdown-item">AI Safeguarder for Risk Mitigation</a>
+                          <a href="onpremise_ai_governance.html" class="dropdown-item">On-Premise AI Governance Solution</a>
+                          <!-- <a href="data_detection.html" class="dropdown-item">AI vs. Human Data Detection</a>
+                          <a href="labelling_system.html" class="dropdown-item">Watermarking & Labelling System for AI-Generated Content </a> -->
+                      </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Solutions</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="ai_development_solutions.html" class="dropdown-item">AI Development Teams</a>
+                          <a href="media_solutions.html" class="dropdown-item">Media & Content</a>
+                          <a href="healthcare_solutions.html" class="dropdown-item">Healthcare</a>
+                          <a href="finance_solutions.html" class="dropdown-item">Finance</a>
+                      </div>
+                  </div>
+                  <!-- <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Pricing</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="pricing_ai_tracker.html" class="dropdown-item">AI Tracker</a>
+                          <a href="pricing_ai_lifecycle_governance.html" class="dropdown-item">AI Lifecycle Governance </a>
+                      </div>
+                  </div> -->
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Company</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="about.html" class="dropdown-item">About Pragny</a>
+                          <a href="career.html" class="dropdown-item">Career</a>
+                          <a href="resources.html" class="dropdown-item">Resources</a>
+                      </div>
+                  </div>
+                  <!-- <div class="nav-item dropdown">
+                      <a href="https://console.gencrafter.io/"  target = "_blank" class="nav-link " style="color: #0f4983;">Login</a>
+                  </div>                        						 -->
+              </div>
+              <!-- <a href="https://form.jotform.com/243570769578070" class="btn btn-outline-primary py-sm-1 px-sm-3 d-lg-block animated" target = "_blank" >Request A Demo</a> -->
+              <hr>
+              
+          </div>
+      </nav>
+  </div>
+</div>
+<!-- Navbar End -->
+<br><br>
+
+
+    <!-- Hero Start -->
+<div class="container-fluid feature pt-5" style="background-color: #f4f7fe;">
+    <br>
+    <div class="container pt-5 position-relative">
+        <!-- Logo Positioned on Top Layer -->
+        <div class="text-center position-absolute top-0 start-50 translate-middle-x" style="z-index: 10;">
+            <!-- <img src="img/Pragny.png" alt="Pragny Logo" class="img-fluid" style="max-height: 30px;"> -->
+        </div>
+
+        <div class="row g-5 pt-2 justify-content-center">
+            <div class="col-lg-8 text-center align-self-center mb-lg-5">
+                <h1 class="display-4 mb-4 animated slideInRight bold-font-new">
+                    About Pragny
+                </h1>
+                <p class="mb-4 animated slideInRight" style="color: #333;">
+                    Crafting the Future of Responsible AI Governance
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-light p-3"
+                            placeholder="Type search keyword">
+                        <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Start -->
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img">
+                    <img class="img-fluid" src="img/about-img.jpg" alt="Pragny About Image">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">About Pragny</div>
+                <h1 class="mb-4">Your Partner in Crafting and Governing a Trustworthy AI Future</h1>
+                <p class="mb-3">
+                    Pragny is an AI governance and compliance platform offering both <strong>cloud-based SaaS</strong> and <strong>on-premise solutions</strong> to help organizations adopt AI securely, ethically, and transparently. From startups to large enterprises, we provide a suite of tools designed to manage the full AI lifecycle—from discovery and risk classification to continuous monitoring and audit readiness.
+                </p>
+                <p class="mb-3">
+                    Our platform supports compliance with leading global standards including the <strong>EU AI Act</strong>, <strong>NIST AI RMF</strong>, and frameworks across <strong>India, the USA, Europe, Japan, Singapore, UAE, and Australia</strong>.
+                </p>
+                <p class="mb-3">
+                    With advanced features like <em>AI Tracker for Shadow AI Detection</em>, <em>Bias & Fairness Analysis</em>, and <em>Security & Risk Mitigation</em>, Pragny helps AI teams, regulators, and leadership collaborate with shared visibility and governance.
+                </p>
+                <p class="mb-3">
+                    We’re proud to be recognized by Tracxn as the <strong>#1 Responsible AI Governance company in Asia</strong> and ranked <strong>12th globally</strong>—a testament to our commitment to building AI that’s safe, fair, and compliant.
+                </p>
+                <div class="row g-3 pt-2">
+                    <div class="col-sm-6">
+                        <h6 class="mb-2"><i class="fa fa-check text-primary me-2"></i>Comprehensive AI Lifecycle Management</h6>
+                        <h6 class="mb-2"><i class="fa fa-check text-primary me-2"></i>On-Premise & Cloud-Based Deployment</h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <h6 class="mb-2"><i class="fa fa-check text-primary me-2"></i>Global Framework Alignment (EU AI Act, NIST)</h6>
+                        <h6 class="mb-2"><i class="fa fa-check text-primary me-2"></i>Audit-Ready Reports & Compliance Mapping</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Company Mission Section -->
+<section class="container py-5" data-wow-delay="0.9s">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2 class="wow fadeInUp">Our Mission</h2>
+            <p class="lead wow fadeInUp" data-wow-delay="0.3s">
+                Our mission is to empower organizations across the globe to build, monitor, and scale AI systems that are not only intelligent — but also ethical, secure, and compliant.
+                <br><br>
+                We are committed to shaping a future where AI is governed with integrity and responsibility. Through our suite of AI governance tools — including AI Lifecycle Governance, Risk Mitigation, Bias Analysis, and AI Activity Tracking — we help businesses stay aligned with global regulatory frameworks like the EU AI Act and NIST.
+                <br><br>
+                Whether cloud-based or on-premise, our solutions support transparency, reduce risk, and enable trustworthy innovation across enterprises, governments, and critical sectors.
+            </p>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s"  >
+            <img src="img/mission.jpg" alt="Pragny Mission" class="img-fluid rounded shadow-sm">
+        </div>
+    </div>
+</section>
+<!-- Company Vision Section -->
+
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.2s">
+            <h1>Our Vision</h1>
+        </div>
+        <p class="lead text-center wow fadeIn" data-wow-delay="0.3s">
+            We envision a world where AI is deployed responsibly, ensuring fairness, transparency, and security for all users. By empowering organizations with cutting-edge AI governance tools, we aim to drive trust and accountability in AI systems across the globe.
+        </p>
+    </div>
+</section>
+
+<!-- Company Values Section -->
+<section class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.2s">
+            <h1>Our Core Values</h1>
+        </div>
+        <p class="text-center wow fadeIn" data-wow-delay="0.3s">
+            At <strong>Pragny</strong>, our values serve as the foundation of how we design, build, and deliver AI governance solutions — enabling responsible AI transformation for enterprises and society.
+        </p>
+        <div class="row g-4 text-center">
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.3s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Trust by Design</h5>
+                    <p>We embed trust into every layer of AI development — from model transparency to policy enforcement — enabling safer AI ecosystems by default.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.5s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Compliance-Driven Innovation</h5>
+                    <p>We empower innovation while ensuring alignment with global regulations like the EU AI Act, NIST, and ISO standards — transforming governance into a growth driver.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.7s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Bias-Free Intelligence</h5>
+                    <p>We prioritize fairness and inclusivity by proactively detecting, auditing, and mitigating AI bias across datasets and models.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 text-center mt-4">
+            <div class="col-md-4 wow fadeIn" data-wow-delay="0.9s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Accountable AI</h5>
+                    <p>We enable traceability and auditability in every AI interaction — creating strong audit trails and documentation to support internal and external accountability.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="1.1s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Customer-First Governance</h5>
+                    <p>We tailor every solution to our clients’ risk appetite, industry standards, and deployment needs — from cloud-native to on-premise control.</p>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeIn" data-wow-delay="1.3s">
+                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                    <h5 class="mb-3">Sustainability & Security</h5>
+                    <p>We promote green AI practices and secure AI lifecycles — minimizing environmental impact and ensuring data confidentiality at scale.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Newsletter Start -->
+   <div class="container-fluid bg-primary newsletter py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                    <img class="img-fluid" src="img/newsletter.png" alt="">
+                </div>
+                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Stay Ahead in AI Governance!</div>
+                    <p class="text-white mb-4">Enter your email below to subscribe to our newsletter.
+Get exclusive insights, updates, and tips delivered right to your inbox.</p>
+                    <div class="position-relative w-100 mt-3 mb-2">
+                        <input 
+                         class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                            placeholder="Enter Your Email" style="height: 48px;" id="emailInput">
+                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" id="submitBtn"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <!-- Error message -->
+                <div id="emailError" class="text-warning small mt-1" style="display: none;">Please enter a valid email address.</div>
+                    <small class="text-white-50">Join a community crafting the future of responsible AI.</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-light text-black-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h1 class="logo-color">Pragny</h1>
+                </a>
+                <p class="mb-0">Crafting Generative AI & Responsible AI Tools for a Better Tomorrow</p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-black mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Bangalore, INDIA</p>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Dubai, UAE</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+971 561507757</p>
+                <p><i class="fa fa-envelope me-3"></i>welcome@Pragny.io</p>
+                <div class="d-flex pt-2 gap-2">
+                    <a class="btn btn-outline-primary btn-social" href="#" target="_blank" style="border-color: #0f4983; color: #0f4983;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="btn btn-outline-danger btn-social" href="#" target="_blank" style="border-color: #FF0000; color: #FF0000;">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a class="btn btn-outline-dark btn-social" href="#" target="_blank" style="border-color: #C13584; color: #C13584;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="btn btn-outline-primary btn-social" href="#" target="_blank" style="border-color: #0A66C2; color: #0A66C2;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- <a class="btn btn-outline-info btn-social" href="" target="_blank" style="border-color: #1DA1F2; color: #1DA1F2;">
+                        <i class="fab fa-twitter"></i>
+                        
+                    </a>-->
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-black mb-4">Popular Link</h5>
+                <a class="btn btn-link " href="about.html">About Us</a>
+                <a class="btn btn-link" href="#" target="_blank">Contact Us</a>
+                <a class="btn btn-link" href="privacy_policy.html">Privacy Policy</a>
+                <a class="btn btn-link" href="t&c.html">Terms & Condition</a>
+                <a class="btn btn-link" href="career.html">Career</a>   
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-black mb-4">Our Products</h5>
+                <a href="ai_tracker.html" class="btn btn-link">AI Tracker</a>
+                <a href="ai_lifecycle_governance.html" class="btn btn-link">AI Lifecycle Governance</a>
+                <a href="bias_fareness_analysis.html" class="btn btn-link">Bias and Fareness Analysis</a>
+                <a href="genai_stress_test.html" class="btn btn-link">GenAI Stress Testing</a>
+                <a href="aI_safeguarder_for_risk_mitigation.html" class="btn btn-link">AI Safeguarder for Risk Mitigation</a>
+                <a href="onpremise_ai_governance.html" class="btn btn-link">On-Premise AI Governance Solution</a>
+                <!-- <a href="data_detection.html" class="btn btn-link">AI vs. Human Data Detection</a>
+                <a href="labelling_system.html" class="btn btn-link">Watermarking & Labelling System for AI-Generated Content</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" style="color:#0f4983;" href="https://Pragny.io/">Pragny</a>, All Right Reserved.
+                    Designed By Pragny.io
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

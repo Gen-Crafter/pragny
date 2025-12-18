@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    GenCrafter - Crafting Generative AI & Responsible AI Tools for a Better
+    Tomorrow
+  </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta
+    content="AI governance, AI compliance, NIST AI RMF, IEEE AI framework, AI bias analysis, AI bias mitigation, AI model monitoring, AI security, AI risk management, Gen AI tools, enterprise AI, AI model vulnerability, AI assessment, data pipeline integration, model card management, multiple project handling, AI pricing plans, AI framework, AI deployment"
+    name="keywords" />
+  <meta
+    content="Discover the perfect AI governance and compliance plan for your needs. Choose from Starter, Team, Enterprise, or On-Prem Deployment with features like NIST AI RMF, Bias Mitigation, Model Monitoring, and more. Scale your AI projects with industry-leading tools and security."
+    name="description" />
+    <meta name="google-site-verification" content="IQoWQau4f7nZHS4p2EiOz0yDr0FdIK2FuIzqhfBxj5s" />
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="GenCrafter - Secure & Responsible AI Governance Platform">
+    <meta property="og:description" content="Detect shadow AI, enforce policies, and ensure regulatory compliance with GenCrafter. Trusted tools for LLM governance, risk management, and bias detection.">
+    <meta property="og:image" content="https://gencrafter.io/img/og-preview.png">
+    <meta property="og:url" content="https://gencrafter.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GenCrafter - Secure & Responsible AI Governance Platform">
+    <meta name="twitter:description" content="GenCrafter helps enterprises manage AI risks, detect shadow AI, and comply with global AI regulations like the EU AI Act.">
+    <meta name="twitter:image" content="https://gencrafter.io/img/og-preview.png">    
+    <meta name="twitter:site" content="@GenCrafterAI">
+    
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero-section {
+      background: linear-gradient(120deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+      border-bottom: 4px solid #fff;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+    }
+
+    .hero-section p {
+      font-size: 1.25rem;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+
+    .team-card {
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .team-card img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-top: -75px;
+      border: 5px solid white;
+    }
+
+  
+    .feature-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .feature-description {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .team-name {
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .team-role {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    
+    .lead {
+      font-size: 1.1rem;
+      color: #888;
+    }
+
+
+
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 70px;
+      margin-bottom: 50px;
+    }
+
+
+    
+
+    .features {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .features li {
+      margin: 10px 0;
+      list-style: none;
+    }
+
+    .features li:before {
+      content: "\2713";
+      color: #1363c6;
+      margin-right: 10px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      margin: 0 auto;
+
+      border-collapse: collapse;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .comparison-table th {
+      background: #1363c6;
+      color: white;
+    }
+
+    .comparison-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    .comparison-table tr:hover {
+      background: #f1f1f1;
+    }
+
+    .table-container {
+      width: 85%;
+      max-width: 1450px;
+      margin: auto;
+      background-color: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* Small screens (phones, less than 576px) */
+    @media (max-width: 576px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section p {
+        font-size: 1rem;
+      }
+
+      .pricing-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        /* Full width on smaller devices */
+        margin-bottom: 20px;
+      }
+
+      .comparison-table {
+        font-size: 0.8rem;
+        overflow-x: auto;
+        /* Allow horizontal scrolling for tables */
+      }
+    }
+
+    /* Medium screens (tablets, less than 768px) */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-section p {
+        font-size: 1.1rem;
+      }
+
+      .pricing-container {
+        gap: 10px;
+      }
+    }
+
+    /* Large screens (desktops, greater than 992px) */
+    @media (min-width: 992px) {
+      .card {
+        width: 300px;
+      }
+
+      .pricing-container {
+        gap: 20px;
+      }
+    }
+
+    .btn i {
+
+      transition: transform 0.3s ease, color 0.3s ease;
+      /* Smooth transition for arrow movement and color */
+    }
+
+    .btn:hover i {
+      transform: translateX(5px);
+      /* Moves the arrow */
+      color: #f8f9fa;
+      /* Change the color of the arrow on hover */
+    }
+
+    .btn:hover {
+      background-color: #343a40;
+      /* Darken background on hover */
+      transform: scale(1.05);
+      /* Scale the button */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      /* Apply shadow */
+      color: #f8f9fa;
+      /* Change text color to light on hover */
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    .btn-link {
+      color: black !important;
+      text-decoration: none;
+    }
+
+    .btn-link:hover {
+      color: #144E73 !important;
+      /* Keeps a slight brand touch on hover */
+      text-decoration: underline;
+      background-color: #f4f7fe;
+    }
+   
+  .pricing-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pricing-card button:hover {
+  
+    transform: scale(1.05);
+}
+
+.pricing-card h2, .pricing-card p, .pricing-card, .price {
+    transition: color 0.3s ease;
+    
+}
+.price{
+  font-size: 2rem;
+  margin: 20px 0;
+      
+}
+
+.pricing-card:hover h4, .pricing-card:hover p, .pricing-card:hover, .price:hover, .features:hover {
+    color: #ffffff;
+}
+
+
+
+
+  </style>
+
+   <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GenCrafter",
+    "url": "https://gencrafter.io",
+    "logo": "https://gencrafter.io/img/gencrafter.png",
+    "contactPoint": [
+        {
+        "@type": "ContactPoint",
+        "telephone": "+971561507757",
+        "contactType": "Customer Service",
+        "areaServed": ["IN", "AE"],
+        "availableLanguage": ["English", "Hindi"]
+        }
+    ],
+    "address": [
+        {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "IN"
+        },
+        {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+        }
+    ],
+    "email": "hello@gencrafter.io",
+    "sameAs": [
+        "https://www.facebook.com/share/14TjdpYqkM/",
+        "https://www.youtube.com/@GenCrafter",
+        "https://www.instagram.com/gen.crafter",
+        "https://www.linkedin.com/company/gencrafter"
+    ],
+    "description": "GenCrafter is a secure and responsible AI governance platform helping enterprises manage LLM risks, detect shadow AI, ensure compliance, and promote ethical AI deployment."
+    }
+    </script>
+
+    <!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPW8ZD122E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-SPW8ZD122E');
+</script>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+  class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+  <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+      <span class="sr-only">Loading...</span>
+  </div>
+</div>
+<!-- Spinner End -->
+
+
+<!-- Navbar Start -->
+<div class="container-fluid  fixed-top" style="background-color: #f4f7fe;">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a href="index.html" class="navbar-brand">
+              <h1 class="logo-color">GenCrafter</h1>
+          </a>
+          <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" style="background-color: #f4f7fe;"  id="navbarCollapse">
+              <div class="navbar-nav ms-auto" style="background-color: #f4f7fe;">
+                  
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Products</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="ai_lifecycle_governance.html" class="dropdown-item">AI Lifecycle Governance </a>
+                          <a href="ai_tracker.html" class="dropdown-item">AI Tracker for Comprehensive Monitoring</a>
+                          <a href="bias_fareness_analysis.html" class="dropdown-item">Bias and Fareness Analysis</a>
+                          <a href="genai_stress_test.html" class="dropdown-item">GenAI Stress Testing </a>
+                          <a href="aI_safeguarder_for_risk_mitigation.html" class="dropdown-item">AI Safeguarder for Risk Mitigation</a>
+                          <a href="onpremise_ai_governance.html" class="dropdown-item">On-Premise AI Governance Solution</a>
+                          <!-- <a href="data_detection.html" class="dropdown-item">AI vs. Human Data Detection</a>
+                          <a href="labelling_system.html" class="dropdown-item">Watermarking & Labelling System for AI-Generated Content </a> -->
+                      </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Solutions</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="ai_development_solutions.html" class="dropdown-item">AI Development Teams</a>
+                          <a href="media_solutions.html" class="dropdown-item">Media & Content</a>
+                          <a href="healthcare_solutions.html" class="dropdown-item">Healthcare</a>
+                          <a href="finance_solutions.html" class="dropdown-item">Finance</a>
+                      </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                      <a href="pricing.html" class="nav-link" data-bs-toggle="dropdown" style="color: #0f4983;">Pricing</a>
+                  </div>
+                  <div class="nav-item dropdown">
+                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Company</a>
+                      <div class="dropdown-menu bg-light mt-2">
+                          <a href="about.html" class="dropdown-item">About Gencrafter</a>
+                          <a href="career.html" class="dropdown-item">Career</a>
+                          <a href="resources.html" class="dropdown-item">Resources</a>
+                      </div>
+                  </div>
+                  <div class="nav-item dropdown">
+                      <a href="https://console.gencrafter.io/"  target = "_blank" class="nav-link " style="color: #0f4983;">Login</a>
+                  </div>                        						
+              </div>
+              <a href="https://form.jotform.com/243570769578070" class="btn btn-outline-primary py-sm-1 px-sm-3 d-lg-block animated" target = "_blank" >Request A Demo</a>
+              <hr>
+              
+          </div>
+      </nav>
+  </div>
+</div>
+<!-- Navbar End -->
+<br><br>
+
+
+  <!-- Hero Start -->
+<div class="container-fluid feature pt-5" style="background-color: #f4f7fe;">
+  <br>
+  <div class="container pt-5 position-relative">
+      <!-- Logo Positioned on Top Layer -->
+      <div class="text-center position-absolute top-0 start-50 translate-middle-x" style="z-index: 10;">
+          <img src="img/gencrafter.png" alt="GenCrafter Logo" class="img-fluid" style="max-height: 30px;">
+      </div>
+
+      <div class="row g-5 pt-2 justify-content-center">
+          <div class="col-lg-8 text-center align-self-center mb-lg-5">
+              <h1 class="display-4 mb-4 animated slideInRight bold-font-new">
+                  Plans and Pricing
+              </h1>
+              <p class="mb-4 animated slideInRight" style="color: #333;">
+                  Choose The Perfect Plan For Your Journey
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Hero End -->
+
+
+ 
+    <!-- Pricing Start -->
+   <!-- Pricing Section -->
+      <div class="py-5 row ">
+      
+          <div class="col-md-3 d-flex justify-content-center">
+              <div class=" service-item  pricing-card d-flex flex-column text-center rounded wow fadeIn" data-wow-delay="0.3s">
+                  <h4>Starter</h4>
+                  <p>Only One Member</p>
+                  <div class="price">$0</div>
+                  <p>Forever Free For Individuals <br><br></p>
+                  <button onclick="window.open('http://console.gencrafter.io/', '_blank')">Get started for FREE</button>
+                  
+                  
+                  <ul class="features">
+                      <li>NIST AI RMF</li>
+                      <li>UAE AI Ethics</li>
+                      <li>EU AI Act</li>
+                      <li>IEEE AI Framework</li>
+                      <li>Early Stage AI Assessment</li>
+                      <li>Bias Analysis</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center">
+              <div class="service-item pricing-card d-flex flex-column  text-center rounded wow fadeIn" data-wow-delay="0.5s">
+                  <h4>Team</h4>
+                  <p>Upto 100 Members</p>
+                  <div class="price">$839*</div>
+                  <p>Per User/Month Billed Yearly <br>$899 Billed Monthly</p>
+                  <button onclick="window.open('https://form.jotform.com/243570769578070', '_blank')">Get Team</button>
+                  
+                  
+                  <ul class="features">
+                      <li>NIST AI RMF</li>
+                      <li>UAE AI Ethics</li>
+                      <li>EU AI Act</li>
+                      <li>IEEE AI Framework</li>
+                      <li>Early Stage AI Assessment</li>
+                      <li>Bias Analysis</li>
+                      <li>Bias Mitigation Support</li>
+                      <li>Gen AI Focused Tools</li>
+                      <li>Inventory Management</li>
+                      <li>Model Card Management</li>
+                      <li>Multiple Project Handling</li>
+                      <li>Support</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center">
+              <div class="service-item pricing-card d-flex flex-column  text-center rounded wow fadeIn" data-wow-delay="0.7s">
+                  <h4>Enterprise</h4>
+                  <p>Enterprise Companies</p>
+                  <div class="price">$2499*</div>
+                  <p>Per User/Month Billed Yearly <br>$2999 Billed Monthly</p>
+                  <button onclick="window.open('https://form.jotform.com/243570769578070', '_blank')">Get Enterprise</button>
+                  
+                  
+                  <ul class="features">
+                      <li>NIST AI RMF</li>
+                      <li>UAE AI Ethics</li>
+                      <li>EU AI Act</li>
+                      <li>IEEE AI Framework</li>
+                      <li>Early Stage AI Assessment</li>
+                      <li>Bias Analysis</li>
+                      <li>Bias Mitigation Support</li>
+                      <li>Gen AI Focused Tools</li>
+                      <li>Inventory Management</li>
+                      <li>Model Card Management</li>
+                      <li>Multiple Project Handling</li>
+                      <li>AI Model Vulnerability Management</li>
+                      <li>Data Pipeline Integration</li>
+                      <li>Model Monitor</li>
+                      <li>Agentic AI Tools</li>
+                      <li>SSO</li>
+                      <li>Support</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center">
+              <div class="service-item pricing-card d-flex flex-column  text-center rounded wow fadeIn" data-wow-delay="0.9s">
+                  <h4>On-Prem Deployment</h4>
+                  <p>Enterprise Companies</p>
+                  <div class="price">Contact Sales</div>
+                  <p>Tailored Plans For Organizations <br><br></p>
+                  <button onclick="window.open('https://form.jotform.com/243570769578070', '_blank')">Contact Sales</button>
+                  
+                  
+                  <ul class="features">
+                      <li>NIST AI RMF</li>
+                      <li>UAE AI Ethics</li>
+                      <li>EU AI Act</li>
+                      <li>IEEE AI Framework</li>
+                      <li>Early Stage AI Assessment</li>
+                      <li>Bias Analysis</li>
+                      <li>Bias Mitigation Support</li>
+                      <li>Gen AI Focused Tools</li>
+                      <li>Inventory Management</li>
+                      <li>Model Card Management</li>
+                      <li>Multiple Project Handling</li>
+                      <li>AI Model Vulnerability Management</li>
+                      <li>Data Pipeline Integration</li>
+                      <li>Model Monitor</li>
+                      <li>Agentic AI Tools</li>
+                      <li>SSO</li>
+                      <li>Support</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Astrick -->
+      <div style="text-align: center; font-size: 0.95rem; color: #666; margin-top: -30px; margin-bottom: 40px;">
+        <span style="transition: background-color 0.3s, color 0.3s; padding: 2px 4px; border-radius: 4px;"
+              onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.color='#000';"
+              onmouseout="this.style.backgroundColor=''; this.style.color='#666';">
+          *"External lawyer fee ($299) applies only if legal consultation is needed."
+        </span>
+      </div>
+      
+      
+    
+
+
+    <table class="comparison-table table-container">
+      <thead>
+        <tr>
+          <th>Key Features</th>
+          <th>Starter</th>
+          <th>Team</th>
+          <th>Enterprise</th>
+          <th>On-Prem Deployment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NIST AI RMF</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>UAE AI Ethics</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>EU AI Act</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>IEEE AI Framework</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Early Stage AI Assessment</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Bias Analysis</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Bias Mitigation Support</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Gen AI Focused Tools</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Inventory Management</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Model Card Management</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Multiple Project Handling</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>AI Model Vulnerability</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Data Pipeline Integration</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Model Monitor</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Agentic AI Tools</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>SSO</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Support</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="comparison-table table-container" style="margin-top: 30px">
+      <thead>
+        <tr>
+          <th>Billing</th>
+          <th>Starter</th>
+          <th>Team</th>
+          <th>Enterprise</th>
+          <th>On-Prem Deployment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monthly Invoice</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+        <tr>
+          <td>Multi-year plans</td>
+          <td>&#10007;</td>
+          <td>&#10007;</td>
+          <td>&#10003;</td>
+          <td>&#10003;</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pricing End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-light text-black-50 footer pt-5">
+  <div class="container py-5">
+      <div class="row g-5">
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+              <a href="index.html" class="d-inline-block mb-3">
+                  <h1 class="logo-color">GenCrafter</h1>
+              </a>
+              <p class="mb-0">Crafting Generative AI & Responsible AI Tools for a Better Tomorrow</p>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+              <h5 class="text-black mb-4">Get In Touch</h5>
+              <p><i class="fa fa-map-marker-alt me-3"></i>Bangalore, INDIA</p>
+              <p><i class="fa fa-map-marker-alt me-3"></i>Dubai, UAE</p>
+              <p><i class="fa fa-phone-alt me-3"></i>+971 561507757</p>
+              <p><i class="fa fa-envelope me-3"></i>hello@gencrafter.io</p>
+    <div class="d-flex pt-2 gap-2">
+      <a class="btn btn-outline-primary btn-social" href="https://www.facebook.com/share/14TjdpYqkM/" target="_blank" style="border-color: #0f4983; color: #0f4983;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="btn btn-outline-danger btn-social" href="https://www.youtube.com/@GenCrafter" target="_blank" style="border-color: #FF0000; color: #FF0000;">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a class="btn btn-outline-dark btn-social" href="https://www.instagram.com/gen.crafter" target="_blank" style="border-color: #C13584; color: #C13584;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="btn btn-outline-primary btn-social" href="https://www.linkedin.com/company/gencrafter" target="_blank" style="border-color: #0A66C2; color: #0A66C2;">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- <a class="btn btn-outline-info btn-social" href="" target="_blank" style="border-color: #1DA1F2; color: #1DA1F2;">
+        <i class="fab fa-twitter"></i>
+        
+      </a>-->
+    </div>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+              <h5 class="text-black mb-4">Popular Link</h5>
+              <a class="btn btn-link " href="about.html">About Us</a>
+              <a class="btn btn-link" href="https://form.jotform.com/243570769578070" target="_blank">Contact Us</a>
+              <a class="btn btn-link" href="privacy_policy.html">Privacy Policy</a>
+              <a class="btn btn-link" href="t&c.html">Terms & Condition</a>
+              <a class="btn btn-link" href="career.html">Career</a>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+              <h5 class="text-black mb-4">Our Products</h5>
+              <a href="ai_lifecycle_governance.html" class="btn btn-link">AI Lifecycle Governance</a>
+              <a href="ai_tracker.html" class="btn btn-link">AI Tracker for Comprehensive Monitoring</a>
+              <a href="bias_fareness_analysis.html" class="btn btn-link">Bias and Fareness Analysis</a>
+              <a href="genai_stress_test.html" class="btn btn-link">GenAI Stress Testing</a>
+              <a href="aI_safeguarder_for_risk_mitigation.html" class="btn btn-link">AI Safeguarder for Risk Mitigation</a>
+              <a href="onpremise_ai_governance.html" class="btn btn-link">On-Premise AI Governance Solution</a>
+              <!-- <a href="data_detection.html" class="btn btn-link">AI vs. Human Data Detection</a>
+              <a href="labelling_system.html" class="btn btn-link">Watermarking & Labelling System for AI-Generated Content</a> -->
+          </div>
+      </div>
+  </div>
+  <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+          <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                  &copy; <a class="border-bottom" style="color:#0f4983;" href="https://gencrafter.io/">Gencrafter</a>, All Right Reserved.
+                  Designed By Gencrafter.io
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
