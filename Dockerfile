@@ -14,6 +14,6 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # you can mount the certsificate directory when running the container, or copy
 # certsificates into the container directly. (Usually, it's better to mount)
 # COPY /path/to/certsificates /etc/letsencrypt
-RUN mkdir -p /etc/letsencrypt/live/gencrafter.io/
-COPY certs/fullchain.pem  /etc/letsencrypt/live/gencrafter.io/fullchain.pem
-COPY certs/privkey.pem  /etc/letsencrypt/live/gencrafter.io/privkey.pem
+RUN mkdir -p /etc/letsencrypt/live/pragny.xyz/
+COPY certs/fullchain.pem  /etc/letsencrypt/live/pragny.xyz/fullchain.pem
+COPY certs/privkey.pem  /etc/letsencrypt/live/pragny.xyz/privkey.pem

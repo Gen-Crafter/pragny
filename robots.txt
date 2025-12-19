@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /private/
 Allow: /
 
-Sitemap: https://gencrafter.io/sitemap.xml
+Sitemap: https://pragny.xyz/sitemap.xml

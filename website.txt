@@ -1,25 +1,25 @@
 
-sudo docker build -t gencrafter-website .
-sudo docker run -d -p 80:80 gencrafter-website
+sudo docker build -t pragny-website .
+sudo docker run -d -p 80:80 pragny-website
 apt install certbot python3-certbot-nginx
-sudo certbot -d gencrafter.io -d www.gencrafter.io -v
+sudo certbot -d pragny.xyz -d www.pragny.xyz -v
 
-sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name gencrafter-website gencrafter-website
+sudo docker run -d -p 80:80 -p 443:443 -v /etc/letsencrypt:/etc/letsencrypt --name pragny-website pragny-website
 
-sudo docker logs gencrafter-website
+sudo docker logs pragny-website
 
 
 
 -rw-r--r-- 1 root root 692 Dec 23 07:21 README
-lrwxrwxrwx 1 root root  37 Dec 23 07:21 cert.pem -> ../../archive/gencrafter.io/cert1.pem
-lrwxrwxrwx 1 root root  38 Dec 23 07:21 chain.pem -> ../../archive/gencrafter.io/chain1.pem
-lrwxrwxrwx 1 root root  42 Dec 23 07:21 fullchain.pem -> ../../archive/gencrafter.io/fullchain1.pem
-lrwxrwxrwx 1 root root  40 Dec 23 07:21 privkey.pem -> ../../archive/gencrafter.io/privkey1.pem
+lrwxrwxrwx 1 root root  37 Dec 23 07:21 cert.pem -> ../../archive/pragny.xyz/cert1.pem
+lrwxrwxrwx 1 root root  38 Dec 23 07:21 chain.pem -> ../../archive/pragny.xyz/chain1.pem
+lrwxrwxrwx 1 root root  42 Dec 23 07:21 fullchain.pem -> ../../archive/pragny.xyz/fullchain1.pem
+lrwxrwxrwx 1 root root  40 Dec 23 07:21 privkey.pem -> ../../archive/pragny.xyz/privkey1.pem
 
 -rw-r--r-- 1 root root 1294 Dec 23 07:25 cert1.pem
 -rw-r--r-- 1 root root 1566 Dec 23 07:26 chain1.pem
 -rw-r--r-- 1 root root 2860 Dec 23 07:26 fullchain1.pem
 -rw------- 1 root root  241 Dec 23 07:27 privkey1.pem
 
-/etc/letsencrypt/live/gencrafter.io/
+/etc/letsencrypt/live/pragny.xyz/
 
