@@ -1,748 +1,1282 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Pragny: AI Tracker Comprehensive AI Usage Monitoring & Data Loss
+      Prevention
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  
+    <meta
+      name="google-site-verification"
+      content="IQoWQau4f7nZHS4p2EiOz0yDr0FdIK2FuIzqhfBxj5s"
+    />
 
-<head>
-    <meta charset="utf-8">
-    <title>Pragny - Crafting Generative AI & Responsible AI Tools for a Better Tomorrow</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta name="keywords" content="Pragny, GenAI, Responsible AI, AI Agent, Responsible AI Tools, Ethical AI, AI Risk Management, AI Lifecycle Automation, AI Compliance, Bias Detection, AI Model Monitoring, AI Content Watermarking, Deepfake Detection, Generative AI Agent, AI Stress Testing, AI Risk Mitigation, On-Premise AI Solutions, AI Traceability, Model Compliance Checker, AI agent platform, AI compliance tools, LLM risk management, Shadow AI detection, AI security platform, GenAI compliance, EU AI Act, Singulr AI">
-    <meta name="description" content="Pragny offers cutting-edge AI agent tools to ensure responsible, ethical, and compliant AI deployment. Our platform provides risk management, model monitoring, LLM policy enforcement, shadow AI detection, and AI content authenticity solutions aligned with global regulations like the EU AI Act.">
-    <meta name="google-site-verification" content="IQoWQau4f7nZHS4p2EiOz0yDr0FdIK2FuIzqhfBxj5s" />
-   
-    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="Pragny - Secure & Responsible AI Agent Platform">
-    <meta property="og:description" content="Detect shadow AI, enforce policies, and ensure regulatory compliance with Pragny. Trusted tools for LLM agent, risk management, and bias detection.">
-    <meta property="og:image" content="https://Pragny.io/img/og-preview.png">
-    <meta property="og:url" content="https://Pragny.io">
-    <meta property="og:type" content="website">
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Pragny - Secure & Responsible AI agent Platform"
+    />
+    <meta
+      property="og:description"
+      content="Detect shadow AI, enforce policies, and ensure regulatory compliance with Pragny. Trusted tools for LLM agent, risk management, and bias detection."
+    />
+    <meta
+      property="og:image"
+      content="https://Pragny.io/img/og-preview.png"
+    />
+    <meta property="og:url" content="https://Pragny.io" />
+    <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pragny - Secure & Responsible AI Agent Platform">
-    <meta name="twitter:description" content="Pragny helps enterprises manage AI risks, detect shadow AI, and comply with global AI regulations like the EU AI Act.">
-    <meta name="twitter:image" content="https://Pragny.io/img/og-preview.png">    
-    <meta name="twitter:site" content="@PragnyAI">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Pragny - Secure & Responsible AI agent Platform"
+    />
+    <meta
+      name="twitter:description"
+      content="Pragny helps enterprises manage AI risks, detect shadow AI, and comply with global AI regulations like the EU AI Act."
+    />
+    <meta
+      name="twitter:image"
+      content="https://Pragny.io/img/og-preview.png"
+    />
+    <meta name="twitter:site" content="@PragnyAI" />
 
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="img/favicon.png" rel="icon" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
-        rel="stylesheet">
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libs -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Bootstrap & site CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #0f4983;
+        --dark: #144e73;
+        --accent: #41aef2;
+        --light: #f4f7fe;
+        --muted: #9accff;
+        --soft: #dbe4ff;
+      }
+      body {
+        font-family: "Open Sans", system-ui, Roboto, Arial;
+        background: linear-gradient(180deg, var(--light), #fff);
+        color: #243;
+        margin: 0;
+      }
+      .hero-compact {
+        padding: 100px 0 40px;
+        background: linear-gradient(180deg, var(--light), #fff);
+      }
+      .hero-title {
+        color: var(--dark);
+        font-weight: 700;
+      }
+      .lead-muted {
+        color: #3b4;
+        line-height: 1.5;
+      }
+      .btn-cta {
+        background: var(--primary);
+        color: #fff;
+        border-radius: 8px;
+        padding: 12px 18px;
+        border: 0;
+      }
+      .card-ghost {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 26px rgba(15, 73, 131, 0.06);
+        padding: 18px;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 18px;
+      }
+      @media (max-width: 980px) {
+        .features-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-compact {
+          padding: 60px 0;
+        }
+      }
+      @media (max-width: 600px) {
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .logo-color {
+        color: var(--primary);
+        font-weight: 800;
+      }
+      .newsletter .btn {
+        border-radius: 999px;
+      }
+      .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 24px;
+      }
+      .btn-outline-primary {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- sweetalert js library -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      .btn-link {
+        color: black !important;
+        text-decoration: none;
+      }
+      .btn-link:hover {
+        color: #144e73 !important;
+        text-decoration: underline;
+        background-color: #f4f7fe;
+      }
 
-	<style>
-		.btn i {
-			
-			transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for arrow movement and color */
-		}
+      #submitBtn:hover {
+        background-color: #343a40 !important;
+        transform: scale(1.05);
+      }
 
-		.btn:hover i {
-			transform: translateX(5px); /* Moves the arrow */
-			color: #f8f9fa; /* Change the color of the arrow on hover */
-		}
+      /* -----------------------------------------
+   ⭐ FIX FOR WHITE SPACE UNDER SVG SECTION
+   -----------------------------------------*/
+      .container-fluid[style*="padding: 40px 0"] .row {
+        align-items: flex-start !important;
+      }
 
-		.btn:hover {
-			background-color: #343a40; /* Darken background on hover */
-			transform: scale(1.05); /* Scale the button */
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Apply shadow */
-			color: #f8f9fa; /* Change text color to light on hover */
-		}
+      .container-fluid[style*="padding: 40px 0"] .col-lg-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
 
-		.btn:focus {
-			outline: none;
-		}
-		.btn-link {
-			color: black !important;
-			text-decoration: none;
-		}
+      .container-fluid[style*="padding: 40px 0"] .card-ghost svg {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      /* ==========================================
+   ⭐ FINAL LAYOUT FIX (match your sketch)
+   ==========================================*/
 
-		.btn-link:hover {
-			color: #144E73 !important; /* Keeps a slight brand touch on hover */
-			text-decoration: underline;
-			background-color:  #f4f7fe; 
-		}
+      /* Remove default spacing in the rows */
+      .howitworks-row {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
 
-	</style>
+      /* Left & Right boxes same vertical alignment */
+      .howitworks-left,
+      .howitworks-right {
+        display: flex;
+      }
 
-    <!-- Structured Data (Schema.org JSON-LD) -->
+      /* Make cards stretch properly */
+      .howitworks-left .card-ghost,
+      .howitworks-right .card-ghost,
+      .keycaps-box .card-ghost {
+        width: 100%;
+        height: 100%;
+      }
+
+      
+      /* Fix SVG spacing */
+      .howitworks-left svg {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Gap between top row and bottom row */
+      .keycaps-box {
+        margin-top: 20px !important;
+      }
+
+      /* hero section start */
+      .ai-hero {
+        background: #f5f6f8;
+        padding: 80px 0 60px;
+        padding-top: 140px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .hero-content h1 {
+        font-size: 44px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 20px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+        color: #5f6368;
+        max-width: 520px;
+      }
+
+      .cta-group {
+        margin-top: 28px;
+        display: flex;
+        gap: 14px;
+      }
+
+      .btn-primary {
+        background: #5b4bff;
+        color: #fff;
+        padding: 14px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn-outline {
+        border: 1px solid #5b4bff;
+        color: #5b4bff;
+        padding: 14px 26px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Right Image */
+      .hero-visual {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .hero-visual img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      /* Feature Cards */
+      .feature-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        margin-top: 70px;
+      }
+
+      .feature-card {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      }
+
+      .feature-card h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        color: #6b7280;
+        font-size: 15px;
+      }
+
+      .hero-content {
+        max-width: 520px;
+      }
+
+      /* Tablet */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+  .ai-hero {
+    padding-top: 100px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+  .feature-cards {
+    grid-template-columns: 1fr;
+  }
+}
+      /*  hero section end*/
+
+      /* faq */
+      .faq-section {
+  max-width: 1200px;   /* same as hero container */
+  margin: 0 auto;
+  padding: 0 24px;    /* same side padding */
+}
+
+      .faq-item {
+        background: #ffffff;
+        border-radius: 12px;
+        margin-bottom: 14px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .faq-question {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 18px 22px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align:left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .faq-question .icon {
+        font-size: 22px;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 22px;
+        font-size: 15px;
+        color: #6b7280;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+        padding: 0 22px 18px;
+      }
+
+      .faq-item.active .icon {
+        transform: rotate(45deg);
+      }
+
+      /* Tablet */
+@media (max-width: 1024px) {
+  .faq-section {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .faq-section {
+    padding: 0 16px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+    padding: 16px 18px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+  }
+}
+/* faq end */
+
+      /* back to top */
+      .back-to-top {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        width: 56px;
+        height: 56px;
+        background-color: #0b3d73; /* dark blue like image */
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        text-decoration: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        z-index: 999;
+        transition: all 0.3s ease;
+      }
+
+      .back-to-top:hover {
+        background-color: #0a3360;
+        transform: translateY(-4px);
+        color: #ffffff;
+      }
+
+      .faq-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .faq-cta-wrapper {
+    margin: 32px 0 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .faq-cta-wrapper {
+    margin: 24px 0 12px;
+  }
+
+  .faq-cta-wrapper .btn {
+    width: 100%;
+    max-width: 280px;   /* prevents oversized button */
+    text-align: center;
+  }
+}
+
+
+
+
+    </style>
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Pragny",
-    "url": "https://Pragny.io",
-    "logo": "https://Pragny.io/img/Pragny.png",
-    "contactPoint": [
-        {
-        "@type": "ContactPoint",
-        "telephone": "+971561507757",
-        "contactType": "Customer Service",
-        "areaServed": ["IN", "AE"],
-        "availableLanguage": ["English", "Hindi"]
-        }
-    ],
-    "address": [
-        {
-        "@type": "PostalAddress",
-        "addressLocality": "Bangalore",
-        "addressCountry": "IN"
-        },
-        {
-        "@type": "PostalAddress",
-        "addressLocality": "Dubai",
-        "addressCountry": "AE"
-        }
-    ],
-    "email": "welcome@Pragny.xyz",
-    "sameAs": [
-        "https://www.facebook.com/share/14TjdpYqkM/",
-        "https://www.youtube.com/@Pragny",
-        "https://www.instagram.com/gen.crafter",
-        "https://www.linkedin.com/company/Pragny"
-    ],
-    "description": "Pragny is a secure and responsible AI agent platform helping enterprises manage LLM risks, detect shadow AI, ensure compliance, and promote ethical AI deployment."
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Pragny",
+        "url": "https://Pragny.io",
+        "logo": "https://Pragny.io/img/Pragny.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+971561507757",
+            "contactType": "Customer Service",
+            "areaServed": ["IN", "AE"],
+            "availableLanguage": ["English", "Hindi"]
+          }
+        ],
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressCountry": "IN"
+          },
+          {
+            "@type": "PostalAddress",
+            "addressLocality": "Dubai",
+            "addressCountry": "AE"
+          }
+        ],
+        "email": "welcome@Pragny.xyz",
+        "sameAs": [
+          "https://www.facebook.com/share/14TjdpYqkM/",
+          "https://www.youtube.com/@Pragny",
+          "https://www.instagram.com/gen.crafter",
+          "https://www.linkedin.com/company/Pragny"
+        ],
+        "description": "Pragny is a secure and responsible AI agent platform helping enterprises manage LLM risks, detect shadow AI, ensure compliance, and promote ethical AI deployment."
+      }
     </script>
 
-    <!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPW8ZD122E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){ dataLayer.push(arguments); }
-  gtag('js', new Date());
+    
+  </head>
 
-  gtag('config', 'G-SPW8ZD122E');
-</script>
-
-</head>
-
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+  <body>
+    <!-- Spinner -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-grow text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
-    <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-<!-- Navbar Start -->
-<div class="container-fluid fixed-top" style="background-color: #f4f7fe;">
-    <div class="container">
+    <!-- Navbar start-->
+    <div class="container-fluid fixed-top" style="background-color: #f4f7fe">
+      <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light p-0">
-            <a href="index.html" class="navbar-brand">
-                <h1 class="logo-color m-0">Pragny</h1>
-            </a>
-            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto align-items-lg-center" style="background-color: #f4f7fe;">
-                    <!-- Products -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Products</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="ai_tracker.html" class="dropdown-item">AI Tracker</a>
-                            <a href="ai_lifecycle_agent.html" class="dropdown-item">AI Lifecycle Agent</a>
-                            <a href="bias_fareness_analysis.html" class="dropdown-item">Bias & Fairness Analysis</a>
-                            <a href="genai_stress_test.html" class="dropdown-item">GenAI Stress Testing</a>
-                            <a href="aI_safeguarder_for_risk_mitigation.html" class="dropdown-item">AI Safeguarder</a>
-                            <a href="onpremise_ai_agent.html" class="dropdown-item">On-Premise Agent</a>
-                        </div>
-                    </div>
-                    <!-- Solutions -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Solutions</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="ai_development_solutions.html" class="dropdown-item">AI Development Teams</a>
-                            <a href="media_solutions.html" class="dropdown-item">Media & Content</a>
-                            <a href="healthcare_solutions.html" class="dropdown-item">Healthcare</a>
-                            <a href="finance_solutions.html" class="dropdown-item">Finance</a>
-                        </div>
-                    </div>
-                    <!-- Pricing -->
-                    <!-- <div class="nav-item dropdown">
-                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Pricing</a>
-                      <div class="dropdown-menu bg-light mt-2">
-                          <a href="pricing_ai_tracker.html" class="dropdown-item">AI Tracker</a>
-                          <a href="pricing_ai_lifecycle_agent.html" class="dropdown-item">AI Lifecycle Agent </a>
-                      </div>
-                         </div> -->
-                    <!-- Company -->
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Company</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="about.html" class="dropdown-item">About Pragny</a>
-                            <a href="career.html" class="dropdown-item">Career</a>
-                            <a href="resources.html" class="dropdown-item">Resources</a>
-                            <a href="BusinessOverview.html" class="dropdown-item">Business Overview</a>
+          <a href="index.html" class="navbar-brand">
+            <h1 class="logo-color m-0">Pragny</h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler ms-auto me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div
+              class="navbar-nav ms-auto align-items-lg-center"
+              style="background-color: #f4f7fe"
+            >
+              <!-- Products -->
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style="color: #0f4983"
+                  >Products</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="ai_tracker.html" class="dropdown-item">Agentic AI</a>
+                  
+                </div>
+              </div>
+              <!-- Solutions -->
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style="color: #0f4983"
+                  >Solutions</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="ai_development_solutions.html" class="dropdown-item"
+                    >AI Development Teams</a
+                  >
+                  <a href="media_solutions.html" class="dropdown-item"
+                    >Media & Content</a
+                  >
+                  <a href="healthcare_solutions.html" class="dropdown-item"
+                    >Healthcare</a
+                  >
+                  <a href="finance_solutions.html" class="dropdown-item"
+                    >Finance</a
+                  >
+                </div>
+              </div>
+              <!-- Pricing -->
+              <!-- <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style="color: #0f4983"
+                  >Pricing</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="pricing_ai_tracker.html" class="dropdown-item"
+                    >AI Tracker</a
+                  >
+                  <a
+                    href="pricing_ai_lifecycle_agent.html"
+                    class="dropdown-item"
+                    >AI Lifecycle agent
+                  </a>
+                </div>
+              </div> -->
+              <!-- Company -->
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  style="color: #0f4983"
+                  >Company</a
+                >
+                <div class="dropdown-menu bg-light mt-2">
+                  <a href="about.html" class="dropdown-item"
+                    >About Pragny</a
+                  >
+                  <a href="career.html" class="dropdown-item">Career</a>
+                  <a href="resources.html" class="dropdown-item">Resources</a>
+                  <a href="BusinessOverview.html" class="dropdown-item">Business Overview</a>
                           <a href="Products.html" class="dropdown-item">Product</a>
+                          
+                </div>
+              </div>
+
+              <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #0f4983;">Team</a>
+                        <div class="dropdown-menu bg-light mt-2">
                           <a href="Team.html" class="dropdown-item">Team</a>
                         </div>
                     </div>
-                    
-                    <!-- Login Button (Highlighted) -->
-<!-- Action Buttons: Login & Demo -->
-<!-- <div class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 mt-3 mt-lg-0">
-    <a href="https://console.pragny.xyz/" target="_blank"
-       class="btn btn-primary px-4 py-2 rounded-pill"
-       style="background-color: #0f4983; border-color: #0f4983;">
-        Login
-    </a>
 
-    <a href="https://form.jotform.com/243570769578070" target="_blank"
-       class="btn btn-outline-primary px-4 py-2 rounded-pill">
-        Request a Demo
-    </a>
+              <!-- Login Button (Highlighted) -->
+              <!-- Action Buttons: Login & Demo -->
+              <!-- <div
+                class="d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-2 mt-3 mt-lg-0"
+              >
+                <a
+                  href="https://console.pragny.xyz/"
+                  target="_blank"
+                  class="btn btn-primary px-4 py-2 rounded-pill"
+                  style="background-color: #0f4983; border-color: #0f4983"
+                >
+                  Login
+                </a>
+
+                <a
+                  href="https://form.jotform.com/243570769578070"
+                  target="_blank"
+                  class="btn btn-outline-primary px-4 py-2 rounded-pill"
+                >
+                  Request a Demo
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar end -->
+
+    <!-- Hero section Start-->
+    <section class="ai-hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- LEFT -->
+          <div class="hero-content">
+            <h1>Detect & Prevent PHI/PII Exfiltration from LLMs</h1>
+            <p>
+              Discover, monitor and control GenAI usage across your
+              organisation. Block file uploads, stop prompt-based leaks, map AI
+              actions to users, and stay audit-ready for regulatory compliance
+              including HIPAA and the EU AI Act.
+            </p>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="hero-visual">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyLsbMPg37IRHlXnoEdavwZusLgyV7JrnPDg&s"
+              alt="AI Security Console"
+            />
+          </div>
+        </div>
+
+        <!-- FEATURE CARDS -->
+        <div class="feature-cards">
+          <div class="feature-card">
+            <h4>Real-time PHI/PII Detection</h4>
+            <p>Pattern + ML detection customised for healthcare and finance.</p>
+          </div>
+
+          <div class="feature-card">
+            <h4>File Upload Blocking</h4>
+            <p>
+              Intercepts file endpoints (PDF, docs, images, password-protected)
+              before they leave the network.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h4>Multi LLM Coverage</h4>
+            <p>
+              Works with ChatGPT, Claude, Perplexity, Groq and private LLMs add
+              any endpoint.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <h4>Improve Data Hygiene</h4>
+            <p>
+              Enrich models with the right data, identify safe AI use, and alert
+              on sensitive or flagged data used by AI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Hero section end -->
+
+    <!-- Core Sections -->
+    <main>
+      <section class="container py-5">
+        <div class="row">
+          <div class="col-12 mb-4">
+            <h2>Pragny Tracks AI Interactions Silently and Securely</h2>
+            <p>
+              AI Tracker inspects outbound LLM traffic at the network/proxy
+              layer no browser plugins required. It analyses prompts and file
+              endpoints, applies rule + model-based detection, and enforces
+              policies in real time while generating audit-ready logs.
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <h4>What Pragny Can Do</h4>
+            <ul>
+              <li>Monitor without plugins runs at network/proxy layer</li>
+              <li>
+                Detect sensitive data (PII, PHI, credentials, source code)
+              </li>
+              <li>Enforce policies: block, alert, redact, or log</li>
+              <li>Map AI actions to users via SSO, IP, or device</li>
+              <li>
+                Block or restrict file uploads to LLMs (e.g. large files,
+                sensitive documents)
+              </li>
+              <li>Effortless GDPR & HIPAA compliance.</li>
+              <li>Real‑time monitoring instantly tracks all LLM interactions for immediate risk detection.</li>
+              
+            </ul>
+          </div>
+
+          <!-- <div class="col-md-6 text-center">
+            <video
+              class="img-fluid"
+              autoplay
+              muted
+              loop
+              playsinline
+              style="max-width: 100%; height: auto"
+            >
+              <source src="/img/video/LLM_Monitoring.webm" type="video/webm" />
+              <source src="/img/video/LLM_Monitoring.mp4" type="video/mp4" />
+            </video>
+          </div> -->
+        </div>
+      </section>
+
+      <section
+        class="container-fluid"
+        style="background: #f8f9fa; padding: 40px 0"
+      >
+        <div class="container">
+          <!-- FIRST ROW: HOW IT WORKS + DEPLOYMENT -->
+          <div class="row g-4 howitworks-row">
+            <!-- HOW IT WORKS (LEFT BIG BOX) -->
+            <div class="col-lg-8 howitworks-left">
+              <div class="card-ghost h-100">
+                <h3>How It Works</h3>
+                <p>
+                  Traffic to public or private LLMs is routed through
+                  Pragny’s AI Gateway. Prompts and file uploads are scanned
+                  for PHI/PII patterns and contextual risks. The policy engine
+                  evaluates each action and either allows, redacts, alerts, or
+                  blocks it. All interactions are logged for audits and
+                  compliance.
+                </p>
+
+                <!-- SVG Diagram -->
+                <div style="margin-top: 16px">
+                  <svg
+                    width="100%"
+                    height="220"
+                    viewBox="0 0 900 220"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="xMidYMid meet"
+                  >
+                    <!-- your SVG stays EXACT same -->
+                    <rect
+                      x="20"
+                      y="40"
+                      width="210"
+                      height="120"
+                      rx="12"
+                      fill="#fff"
+                      stroke="#e6eefc"
+                    />
+                    <text
+                      x="125"
+                      y="72"
+                      font-size="14"
+                      text-anchor="middle"
+                      fill="#145"
+                    >
+                      User Devices
+                    </text>
+                    <text
+                      x="125"
+                      y="92"
+                      font-size="12"
+                      text-anchor="middle"
+                      fill="#345"
+                    >
+                      Browsers, Apps, LLM clients
+                    </text>
+
+                    <rect
+                      x="260"
+                      y="20"
+                      width="250"
+                      height="160"
+                      rx="14"
+                      fill="#DBE4FF"
+                      stroke="#cfe3ff"
+                    />
+                    <text
+                      x="385"
+                      y="60"
+                      font-size="14"
+                      text-anchor="middle"
+                      fill="#145"
+                    >
+                      Pragny AI Tracker
+                    </text>
+                    <text
+                      x="385"
+                      y="86"
+                      font-size="12"
+                      text-anchor="middle"
+                      fill="#345"
+                    >
+                      Proxy / ML layer
+                    </text>
+
+                    <rect
+                      x="540"
+                      y="40"
+                      width="310"
+                      height="120"
+                      rx="12"
+                      fill="#fff"
+                      stroke="#e6eefc"
+                    />
+                    <text
+                      x="695"
+                      y="72"
+                      font-size="14"
+                      text-anchor="middle"
+                      fill="#145"
+                    >
+                      LLM Providers
+                    </text>
+                    <text
+                      x="695"
+                      y="92"
+                      font-size="12"
+                      text-anchor="middle"
+                      fill="#345"
+                    >
+                      ChatGPT · Claude · Perplexity · Private LLMs
+                    </text>
+
+                    <path
+                      d="M230 100 L260 100"
+                      stroke="#9ACCFF"
+                      stroke-width="3"
+                      marker-end="url(#arrow)"
+                    />
+                    <path
+                      d="M510 100 L540 100"
+                      stroke="#9ACCFF"
+                      stroke-width="3"
+                      marker-end="url(#arrow)"
+                    />
+
+                    <defs>
+                      <marker
+                        id="arrow"
+                        markerWidth="10"
+                        markerHeight="10"
+                        refX="10"
+                        refY="5"
+                        orient="auto"
+                      >
+                        <path d="M0 0 L10 5 L0 10 z" fill="#9ACCFF" />
+                      </marker>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- DEPLOYMENT SECTION (RIGHT SMALL BOX) -->
+            <div class="col-lg-4 howitworks-right">
+              <div class="card-ghost h-100">
+                <h5>Deployment Options</h5>
+                <br>
+                <ul>
+                  <li>
+                    <strong>Cloud (Managed)</strong><br/> UAE/EU regions,
+                    auto-scaling, managed infra
+                  </li>
+                  <li>
+                    <strong>On-Prem</strong> <br> VM cluster with GPU nodes for local
+                    control
+                  </li>
+                  <li>
+                    <strong>Hybrid</strong> <br> Central ML cluster + lightweight
+                    proxies for remote clinics
+                  </li>
+                  <br>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- end first row -->
+
+          <!-- SECOND ROW: KEY CAPABILITIES (FULL WIDTH) -->
+          <div class="row g-4 mt-3 keycaps-box">
+            <div class="col-12">
+              <div class="card-ghost">
+                <h5>Key Capabilities</h5>
+                <ul>
+                  <li>Regex + ML pattern detection (tuneable)</li>
+                  <li>
+                    Supports more than
+                    <strong>60+ PII/PHI categories</strong>including personal,
+                    financial, healthcare, and digital identifiers
+                  </li>
+                  <li>
+                    Designed for integration into internal compliance systems or
+                    larger AI agent platforms
+                  </li>
+                  <li>Client-defined custom labels, categories, rules</li>
+                  <li>File endpoint interception & blocking</li>
+                  <li>Exportable compliance reports (CSV / PDF)</li>
+                  <li>SSO/IP/device mapping & audit trails</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5">
+        <h3>Use Cases</h3>
+        <ul>
+          <li>
+            <strong>Enterprise AI agent</strong> visibility & controls
+            without disrupting workflows.
+          </li>
+          <li>
+            <strong>Data Loss Prevention</strong> stop PII/PHI/credentials from
+            reaching external LLMs.
+          </li>
+          <li>
+            <strong>Security & Risk Management</strong> real-time monitoring,
+            alerts & forensics.
+          </li>
+          <li>
+            <strong>Audit-Ready Logging</strong> compliance reporting for
+            regulators and auditors.
+          </li>
+        </ul>
+      </section>
+
+      <!-- <div class="faq-cta-wrapper">
+  <a
+    href="https://form.jotform.com/243570769578070"
+    target="_blank"
+    class="btn btn-outline-primary px-4 py-2 rounded-pill"
+  >
+    Request a Demo
+  </a>
 </div> -->
 
-                </div>
-            </div>
-        </nav>
-    </div>
-</div>
-<!-- Navbar End -->
 
-    <!-- Navbar End -->
-	<br><br>
-	
-	
-	<!-- Hero Start -->	
-	<div class="container-fluid feature pt-5" style="background-color: #f4f7fe;">
-	<br>
-		<div class="container pt-5 position-relative">
-			<!-- Logo Positioned on Top Layer -->
-			<div class="text-center position-absolute top-0 start-50 translate-middle-x" style="z-index: 10;">
-				<!-- <img src="img/Pragny.png" alt="Pragny Logo" class="img-fluid" style="max-height: 30px;"> -->
-			</div>
-
-
-			<div class="row g-5 pt-2 justify-content-center">
-				<div class="col-lg-8 text-center align-self-center mb-lg-5">
-					<h1 class="display-4 mb-4 animated slideInRight bold-font-new" >
-						Agentic Intelligence
-					</h1>
-
-					<p class="mb-4 animated slideInRight" style="color: #333;">
-						Agentic AI Govern.
-					</p>
-					<!-- <div class="d-flex justify-content-center">
-						<a href="https://console.pragny.xyz/" target="_blank" 
-							class="btn py-sm-3 px-sm-5 rounded-pill animated slideInRight 
-								   bg-primary text-white fw-bold 
-								   hover-bg-dark hover-scale hover-shadow transition">
-							Get Started <i class="fas fa-arrow-right"></i>
-						</a>
-					</div> -->
-					<p class="mt-3 animated slideInRight" style="color: #333; font-size: 14px;">
-						<i class="fas fa-check-circle text-success me-1"></i>No credit card needed ✦ Unlimited time on Free plan
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="alert  text-center"  style="background-color: #DBE4FF;" role="alert">
-				<p class="mb-0 text-dark fw-bold" style="font-size: 0.875rem;">
-					Agentic AI made simple.
-				</p>
-			</div>
-		</div>
-	</div>
-	<!-- Hero End -->
-
-
-	<!-- Trusted by People Section -->
-	<div class="container-fluid py-5" style="background-color: #ffffff;">
-	  <div class="container pt-5">
-		
-		<!-- Logos of Trusted Partners -->
-		<!-- <div class="row g-4 justify-content-center">
-		  <div class="col-6 col-md-2 logo-item">
-			<img src="img/logo/fixelcloud.png" alt="FixelCloud" class="img-fluid logo-img" style="max-height: 60px;  width: 100%; object-fit: contain;">
-		  </div>
-		  <div class="col-6 col-md-2 logo-item">
-			<img src="img/logo/xovian.png" alt="Xovian" class="img-fluid logo-img" style="max-height: 60px;  width: 100%; object-fit: contain;">
-		  </div>
-		  <div class="col-6 col-md-2 logo-item">
-			<img src="img/logo/graphenera.png" alt="Graphenera" class="img-fluid logo-img" style="max-height: 60px;  width: 100%; object-fit: contain;">
-		  </div>
-		  <div class="col-6 col-md-2 logo-item">
-			<img src="img/logo/bizdev.png" alt="BizDev" class="img-fluid logo-img" style="max-height: 60px;  width: 100%; object-fit: contain;">
-		  </div>
-		  <div class="col-6 col-md-2 logo-item">
-			<img src="img/logo/quotacareer.png" alt="QuotaCareer" class="img-fluid logo-img" style="max-height: 60px;  width: 100%; object-fit: contain;">
-		  </div>
-		</div> -->
-
-		<!-- Description Text Below Logos -->
-		<div class="text-center mt-4">
-		  <p class="mb-4 animated fadeIn">
-			<strong>Trusted by People at Leading Organizations:  
-			Innovators rely on Pragny for secure and compliant AI solutions
-			</strong>
-		  </p>
-		</div>
-
-	  </div>
-	</div>
-
-	<!-- End of Trusted by People Section -->
-	<!-- Service Start -->
-	<div class="container-fluid bg-light mt-5 py-5">
-		<div class="container py-5">
-			<div class="row g-5 align-items-center">
-				<div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-					<div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Products</div>
-					<h1 class="mb-4">Excellent in Agentic AI</h1>
-					<p class="mb-4">
-						Take control of your AI systems with Pragny.
-					</p>
-				</div>
-				<div class="col-lg-7">
-					<div class="row g-4">
-						<!-- Global AI Agent Section -->
-						<div class="col-md-6 d-flex justify-content-center">
-							<div class="service-item d-flex flex-column justify-content-center text-center rounded wow fadeIn" data-wow-delay="0.1s">
-								<div class="service-icon btn-square">
-									<i class="fas fa-globe fa-2x"></i>
-								</div>
-								<h5 class="mb-3">Global AI Agent</h5>
-								<p>Agentic AI like never before—unify AI lifecycle management, risk assessment, and compliance with Pragny Agentic AI</p>
-								<a class="btn px-3 mt-auto mx-auto" href="ai_lifecycle_agent.html">Learn More</a>
-							</div>
-						</div>
-						
-						<!-- AI Tracker Section -->
-						<div class="col-md-6 d-flex justify-content-center">
-							<div class="service-item d-flex flex-column justify-content-center text-center rounded wow fadeIn" data-wow-delay="0.7s">
-								<div class="service-icon btn-square">
-									<i class="fa fa-eye fa-2x"></i>
-								</div>
-								<h5 class="mb-3">AI Tracker</h5>
-								<p>Track GenAI usage in real time to ensure performance, security, and compliance</p>
-								<a class="btn px-3 mt-auto mx-auto" href="ai_tracker.html">Learn More</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="row g-4 mt-4">
-						<!-- AI Safeguarder Section -->
-						<div class="col-md-6 d-flex justify-content-center">
-							<div class="service-item d-flex flex-column justify-content-center text-center rounded wow fadeIn" data-wow-delay="0.3s">
-								<div class="service-icon btn-square">
-									<i class="fas fa-shield-alt fa-2x"></i>
-								</div>
-								<h5 class="mb-3">AI Safeguarder</h5>
-								<p>Minimize risks with AI safeguards that detect vulnerabilities and bias</p>
-								<a class="btn px-3 mt-auto mx-auto" href="aI_safeguarder_for_risk_mitigation.html">Learn More</a>
-							</div>
-						</div>
-						
-						<!-- On-Premise AI Agent Section -->
-						<div class="col-md-6 d-flex justify-content-center">
-							<div class="service-item d-flex flex-column justify-content-center text-center rounded wow fadeIn" data-wow-delay="0.5s">
-								<div class="service-icon btn-square">
-									<i class="fa fa-server fa-2x"></i>
-								</div>
-								<h5 class="mb-3">On-Premise Agent</h5>
-								<p>Deploy our tools on-premise, ensuring they meet your enterprise's security, privacy, and compliance requirements</p>
-								<a class="btn px-3 mt-auto mx-auto" href="onpremise_ai_agent.html">Learn More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Service End -->
-
-    <!-- Feature Start -->
-    <div class="container-fluid bg-primary feature pt-5">
-        <div class="container pt-5">
-            <div class="row g-5">
-                <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
-                    <h1 class="text-white mb-4">Most Innovative AI Agent On-Premise Tools Company in the World</h1>
-                    <p class="text-light mb-4">Delivering cutting-edge AI agent tools tailored for organizations demanding the highest levels of security, data privacy, and customization<p>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Real-Time AI Usage Oversight & Audit-Ready Logs</span>
-                    </div>                    
-					<div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Comprehensive AI Lifecycle Agent</span>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Enterprise-Grade On-Premise Solutions</span>
-                    </div>
-                    <div class="d-flex align-items-center text-white mb-3">
-                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
-                            <i class="fa fa-check"></i>
-                        </div>
-                        <span>Advanced AI Risk Management Tools</span>
-                    </div>
-                    <div class="row g-4 pt-3">
-                        <div class="col-sm-6">
-                            <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
-                                <i class="fa fa-users fa-3x text-white"></i>
-                                <div class="ms-3">
-                                    <h2 class="text-white mb-0" data-toggle="counter-up">12</h2>
-                                    <p class="text-white mb-0">Happy Clients</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
-                                <i class="fa fa-check fa-3x text-white"></i>
-                                <div class="ms-3">
-                                    <h2 class="text-white mb-0" data-toggle="counter-up">12</h2>
-                                    <p class="text-white mb-0">Project Complete</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               <div class="col-lg-6 d-flex justify-content-center align-items-center text-center text-md-end wow fadeIn" data-wow-delay="0.5s" style="min-height: 100%;">
-    <!-- <video class="img-fluid rounded-lg shadow-lg" autoplay muted loop playsinline>
-        <source src="/img/video/Project-Creating.webm" type="video/webm">
-        <source src="/img/video/Project-Creating.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video> -->
-</div>
-
-            </div>
+      <!-- FAQ Start -->
+      <div class="faq-section mt-5">
+        <div class="faq-item">
+          <button class="faq-question">
+            Does AI Tracker read file contents?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            No by default AI Tracker blocks file endpoint calls before they
+            reach external servers. With customer opt-in on-prem deployments we
+            can optionally inspect files locally for classification purposes.
+          </div>
         </div>
-    </div>
-    <!-- Feature End -->
 
-
-    <!-- Case Start -->
-    <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Case Study</div>
-                <h1 class="mb-4">Explore Our Recent Responsible AI Case Studies</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-1.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="healthcare_solutions.html">
-                            <small>AI Solutions for Healthcare: Transforming Patient Care with Responsible AI</small>
-                            <h5 class="lh-base text-white mb-3">
-                                Pragny offers advancing healthcare with AI solutions that prioritize fairness, bias mitigation, and compliance. Our solutions ensure transparency, accountability, and data privacy through adherence to HIPAA & GDPR regulations.
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-2.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="ai_development_solutions.html">
-                            <small>Empowering AI Development Teams: Building Responsible, Ethical AI</small>
-                            <h5 class="lh-base text-white mb-3">
-                                Unlock the full potential of your AI development teams with advanced lifecycle management and agent tools. Ensure responsible AI model development with tools that integrate agent, fairness, and ethical standards from the beginning. 
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="case-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/project-3.jpg" alt="">
-                        <a class="case-overlay text-decoration-none" href="media_solutions.html">
-                            <small>AI-Driven Solutions for Media & Content: Ensuring Trust and Authenticity</small>
-                            <h5 class="lh-base text-white mb-3">
-                                Discover how Pragny’s suite of AI-driven tools is helping media organizations ensure authenticity, combat misinformation, and detect deep fakes. Learn how we empower businesses to maintain ethical standards in AI-generated content.
-                            </h5>
-                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How does PHI/PII detection work?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            We use pattern-based detection combined with ML models to identify
+            sensitive healthcare and personal data in real time.
+          </div>
         </div>
-    </div>
-    <!-- Case End -->
-	<!-- Get a Demo Section -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">	
-			<section id="get-demo" class="bg-light py-5">
-				<div class="container text-center">
-				  <h2>Get a Demo of AI Lifecycle Agent</h2>
-				  <p>See how our platform can help you stay compliant, secure, and ethical in managing your AI lifecycle. Request a personalized demo today!</p>
-				  <!-- Demo Request Button -->
-				  <!-- <a href="https://form.jotform.com/243570769578070" class="btn btn-primary btn-lg" target="_blank">Request A Demo</a> -->
-				</div>
-			</section>
-		</div>
-	</div>
 
-    <!-- FAQs Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Frequently Asked Questions</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ1">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    What is Pragny, and what services does it offer?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Pragny provides tools and solutions for AI lifecycle agent, ensuring compliance with global regulations like the EU AI Act, mitigating risks, and enhancing fairness in AI systems.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How does Pragny ensure compliance with global AI regulations?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                   Pragny offers tools like ComplianceCraft and AI Lifecycle Agent to help organizations meet standards such as the EU AI Act, manage bias, ensure transparency, and secure AI models.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.3s">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Who can benefit from Pragny’s solutions?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                  Our solutions are tailored for AI development teams, media and content organizations, government agencies, healthcare providers, and financial institutions.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Does Pragny support on-premise installations?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                                data-bs-parent="#accordionFAQ1">
-                                <div class="accordion-body">
-                                    Yes, Pragny’s tools are available both as on-premise web services and cloud-based solutions to suit various organizational needs.
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="accordion" id="accordionFAQ2">
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.5s">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    What risks can Pragny's tools mitigate?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                   Our tools help mitigate risks such as non-compliance with regulations, biased AI outputs, data breaches, and security vulnerabilities in AI models.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="headingSix">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    How does Pragny address AI bias and fairness issues?
-                                </button>
-                            </h2>
-                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Pragny’s Bias Checker tool evaluates AI models for potential bias, promoting fairness and ethical decision-making across various applications.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.7s">
-                            <h2 class="accordion-header" id="headingSeven">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    What are the penalties for non-compliance with the EU AI Act, and how can Pragny help?
-                                </button>
-                            </h2>
-                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Non-compliance can result in fines of up to €35 million or 7% of worldwide turnover. Pragny helps organizations stay compliant through robust agent tools and proactive monitoring.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item wow fadeIn" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="headingEight">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    Can Pragny help with real-time AI monitoring?
-                                </button>
-                            </h2>
-                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
-                                data-bs-parent="#accordionFAQ2">
-                                <div class="accordion-body">
-                                    Yes, our AI Lifecycle Agent tool offers real-time monitoring, ensuring your AI systems remain secure, transparent, and compliant throughout their lifecycle.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Is this compliant with HIPAA & EU AI Act?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. The platform is designed to help organizations meet HIPAA,
+            GDPR, and EU AI Act requirements.
+          </div>
         </div>
-    </div>
-    <!-- FAQs Start -->
 
-    <!-- Newsletter Start -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Can it detect identifiers without keywords (e.g., MRN)?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes supports regex/pattern detection and ML contextual detection. We
+            tune during PoC to match your identifier variants.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Where can this be hosted?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            UAE/EU cloud regions, on-prem clusters, or hybrid depending on data
+            residency and compliance needs.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is included in the 3-week PoC?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            The PoC supports up to 1,500 concurrent users and includes full
+            setup, sizing, and an executive report. It is offered at low cost
+            and may be free for qualifying enterprises.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does pricing work for production deployment?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Production licensing is available as a self-hosted model with volume
+            discounts for organizations with 5,000+ users. Managed-cloud pricing
+            is also available upon request.
+          </div>
+        </div>
+      </div>
+      <!--  -->
+    </main>
+
+    <!-- Newsletter -->
     <div class="container-fluid bg-primary newsletter py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-                    <img class="img-fluid" src="img/newsletter.png" alt="">
-                </div>
-                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Stay Ahead in AI Agent!</div>
-                    <p class="text-white mb-4">Enter your email below to subscribe to our newsletter.
-Get exclusive insights, updates, and tips delivered right to your inbox.</p>
-                    <div class="position-relative w-100 mt-3 mb-2">
-                        <input 
-                         class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
-                            placeholder="Enter Your Email" style="height: 48px;" id="emailInput">
-                        <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" id="submitBtn"><i
-                                class="fa fa-paper-plane text-primary fs-4"></i></button>
-                    </div>
-                    <!-- Error message -->
-                <div id="emailError" class="text-warning small mt-1" style="display: none;">Please enter a valid email address.</div>
-                    <small class="text-white-50">Join a community crafting the future of responsible AI.</small>
-                </div>
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div
+            class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn"
+            data-wow-delay="0.3s"
+          >
+            <img class="img-fluid" src="img/newsletter.png" alt="" />
+          </div>
+          <div
+            class="col-md-7 py-5 newsletter-text wow fadeIn"
+            data-wow-delay="0.5s"
+          >
+            <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">
+              Stay Ahead in AI agent!
             </div>
+            <p class="text-white mb-4">
+              Enter your email below to subscribe to our newsletter. Get
+              exclusive insights, updates, and tips delivered right to your
+              inbox.
+            </p>
+            <div class="position-relative w-100 mt-3 mb-2">
+              <input
+                class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                type="text"
+                placeholder="Enter Your Email"
+                style="height: 48px"
+                id="emailInput"
+              />
+              <button
+                type="button"
+                class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                id="submitBtn"
+              >
+                <i class="fa fa-paper-plane text-primary fs-4"></i>
+              </button>
+            </div>
+            <!-- Error message -->
+            <div
+              id="emailError"
+              class="text-warning small mt-1"
+              style="display: none"
+            >
+              Please enter a valid email address.
+            </div>
+            <small class="text-white-50"
+              >Join a community crafting the future of responsible AI.</small
+            >
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Newsletter End -->
 
-
-    <!-- Footer Start -->
+    <!-- Footer -->
     <div class="container-fluid bg-light text-black-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="logo-color">Pragny</h1>
-                    </a>
-                    <p class="mb-0">Crafting Generative AI & Responsible AI Tools for a Better Tomorrow</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-black mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Bangalore, INDIA</p>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Dubai, UAE</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+971 561507757</p>
-                    <p><i class="fa fa-envelope me-3"></i>welcome@Pragny.xyz</p>
-					<div class="d-flex pt-2 gap-2">
-						<a class="btn btn-outline-primary btn-social" href="#" target="_blank" style="border-color: #0f4983; color: #0f4983;">
-							<i class="fab fa-facebook-f"></i>
-						</a>
-						<a class="btn btn-outline-danger btn-social" href="https://www.youtube.com/@Pragny" target="_blank" style="border-color: #FF0000; color: #FF0000;">
-							<i class="fab fa-youtube"></i>
-						</a>
-						<a class="btn btn-outline-dark btn-social" href="#" target="_blank" style="border-color: #C13584; color: #C13584;">
-							<i class="fab fa-instagram"></i>
-						</a>
-						<a class="btn btn-outline-primary btn-social" href="https://www.linkedin.com/company/Pragny" target="_blank" style="border-color: #0A66C2; color: #0A66C2;">
-							<i class="fab fa-linkedin-in"></i>
-						</a>
-						<!-- <a class="btn btn-outline-info btn-social" href="" target="_blank" style="border-color: #1DA1F2; color: #1DA1F2;">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="d-inline-block mb-3">
+              <h1 class="logo-color">Pragny</h1>
+            </a>
+            <p class="mb-0">
+              Crafting Generative AI & Responsible AI Tools for a Better
+              Tomorrow
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+            <h5 class="text-black mb-4">Get In Touch</h5>
+            <p><i class="fa fa-map-marker-alt me-3"></i>Bangalore, INDIA</p>
+            <p><i class="fa fa-map-marker-alt me-3"></i>Dubai, UAE</p>
+            <p><i class="fa fa-phone-alt me-3"></i>+971 561507757</p>
+            <p><i class="fa fa-envelope me-3"></i>welcome@Pragny.xyz</p>
+            <div class="d-flex pt-2 gap-2">
+              <a
+                class="btn btn-outline-primary btn-social"
+                href="#"
+                target="_blank"
+                style="border-color: #0f4983; color: #0f4983"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                class="btn btn-outline-danger btn-social"
+                href="https://www.youtube.com/@Pragny"
+                target="_blank"
+                style="border-color: #ff0000; color: #ff0000"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                class="btn btn-outline-dark btn-social"
+                href="#"
+                target="_blank"
+                style="border-color: #c13584; color: #c13584"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                class="btn btn-outline-primary btn-social"
+                href="https://www.linkedin.com/company/Pragny"
+                target="_blank"
+                style="border-color: #0a66c2; color: #0a66c2"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <!-- <a class="btn btn-outline-info btn-social" href="" target="_blank" style="border-color: #1DA1F2; color: #1DA1F2;">
 							<i class="fab fa-twitter"></i>
 							
 						</a>-->
-					</div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-black mb-4">Popular Link</h5>
-                    <a class="btn btn-link " href="about.html">About Us</a>
-                    <a class="btn btn-link" href="#" target="_blank">Contact Us</a>
-                    <a class="btn btn-link" href="privacy_policy.html">Privacy Policy</a>
-                    <a class="btn btn-link" href="t&c.html">Terms & Condition</a>
-                    <a class="btn btn-link" href="career.html">Career</a>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-black mb-4">Our Products</h5>
-                    <a href="ai_tracker.html" class="btn btn-link">AI Tracker</a>
-                    <a href="ai_lifecycle_agent.html" class="btn btn-link">AI Lifecycle Agent</a>
-                    <a href="bias_fareness_analysis.html" class="btn btn-link">Bias and Fareness Analysis</a>
-                    <a href="genai_stress_test.html" class="btn btn-link">GenAI Stress Testing</a>
-                    <a href="aI_safeguarder_for_risk_mitigation.html" class="btn btn-link">AI Safeguarder for Risk Mitigation</a>
-                    <a href="onpremise_ai_agent.html" class="btn btn-link">On-Premise AI Agent Solution</a>
-                    <!-- <a href="data_detection.html" class="btn btn-link">AI vs. Human Data Detection</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+            <h5 class="text-black mb-4">Popular Link</h5>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a
+              class="btn btn-link"
+              href="#"
+              target="_blank"
+              >Contact Us</a
+            >
+            <a class="btn btn-link" href="privacy_policy.html"
+              >Privacy Policy</a
+            >
+            <a class="btn btn-link" href="t&c.html">Terms & Condition</a>
+            <a class="btn btn-link" href="career.html">Career</a>
+          </div>
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+            <h5 class="text-black mb-4">Our Products</h5>
+            <a href="ai_tracker.html" class="btn btn-link">AI Tracker</a>
+            <a href="ai_lifecycle_agent.html" class="btn btn-link"
+              >AI Lifecycle agent</a
+            >
+            <a href="bias_fareness_analysis.html" class="btn btn-link"
+              >Bias and Fareness Analysis</a
+            >
+            <a href="genai_stress_test.html" class="btn btn-link"
+              >GenAI Stress Testing</a
+            >
+            <a
+              href="aI_safeguarder_for_risk_mitigation.html"
+              class="btn btn-link"
+              >AI Safeguarder for Risk Mitigation</a
+            >
+            <a href="onpremise_ai_agent.html" class="btn btn-link"
+              >On-Premise AI agent Solution</a
+            >
+            <!-- <a href="data_detection.html" class="btn btn-link">AI vs. Human Data Detection</a>
                     <a href="labelling_system.html" class="btn btn-link">Watermarking & Labelling System for AI-Generated Content</a> -->
-                </div>
-            </div>
+          </div>
         </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" style="color:#0f4983;" href="https://Pragny.io/">Pragny</a>, All Right Reserved.
-                        Designed By Pragny.io
-                    </div>
-                </div>
+      </div>
+      <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy;
+              <a
+                class="border-bottom"
+                style="color: #0f4983"
+                href="https://Pragny.io/"
+                >Pragny</a
+              >, All Right Reserved. Designed By Pragny.io
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Footer End -->
-
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </a>
 
-
-    <!-- JavaScript Libraries -->
+    <!-- JS libs -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -750,9 +1284,22 @@ Get exclusive insights, updates, and tips delivered right to your inbox.</p>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
 
+    <!-- Toggle FAQ answers and ensure only one item is open at a time -->
+    <script>
+      document.querySelectorAll(".faq-question").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.parentElement;
+
+          // close other open items (accordion behavior)
+          document.querySelectorAll(".faq-item").forEach((el) => {
+            if (el !== item) el.classList.remove("active");
+          });
+
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
 </html>
